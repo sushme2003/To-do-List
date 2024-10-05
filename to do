@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+           var li= document.createElement("li");
+           li.innerHTML=document.getElementById("text").value+"<button onclick='deletee(event)'> Delete </button>"
+           var item=document.getElementById("ul");
+           item.append(li);
+        }
+        function deletee(event){
+            event.target.parentElement.remove();
+        }
+    </script>
+</head>
+<body>
+   <input type="text" id="text" placeholder="enter"><br>
+   <button id="add" onclick="add()"> Add</button>
+   <ul id="ul">
+    <li> "Welcome !!"  <button onclick="deletee(event)"> Delete </button></li>
+   </ul>
+</body>
+</html>
